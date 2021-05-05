@@ -10,243 +10,278 @@ import retrofit2.Response
 
 class CoursesCalculatorViewModel(private val repository: Repository): ViewModel() {
 
-    val singleRateRespone: MutableLiveData<Response<SingleRateModel>> = MutableLiveData()
+    val singleRateResponeCHF: MutableLiveData<Response<SingleRateModel>> = MutableLiveData()
+    val singleRateResponeEUR: MutableLiveData<Response<SingleRateModel>> = MutableLiveData()
+    val singleRateResponeUSD: MutableLiveData<Response<SingleRateModel>> = MutableLiveData()
+    val singleRateResponeTHB: MutableLiveData<Response<SingleRateModel>> = MutableLiveData()
+    val singleRateResponeAUD: MutableLiveData<Response<SingleRateModel>> = MutableLiveData()
+    val singleRateResponeHKD: MutableLiveData<Response<SingleRateModel>> = MutableLiveData()
+    val singleRateResponeCAD: MutableLiveData<Response<SingleRateModel>> = MutableLiveData()
+    val singleRateResponeNZD: MutableLiveData<Response<SingleRateModel>> = MutableLiveData()
+    val singleRateResponeSGD: MutableLiveData<Response<SingleRateModel>> = MutableLiveData()
+    val singleRateResponeHUF: MutableLiveData<Response<SingleRateModel>> = MutableLiveData()
+    val singleRateResponeGBP: MutableLiveData<Response<SingleRateModel>> = MutableLiveData()
+    val singleRateResponeUAH: MutableLiveData<Response<SingleRateModel>> = MutableLiveData()
+    val singleRateResponeJPY: MutableLiveData<Response<SingleRateModel>> = MutableLiveData()
+    val singleRateResponeCZK: MutableLiveData<Response<SingleRateModel>> = MutableLiveData()
+    val singleRateResponeDKK: MutableLiveData<Response<SingleRateModel>> = MutableLiveData()
+    val singleRateResponeISK: MutableLiveData<Response<SingleRateModel>> = MutableLiveData()
+    val singleRateResponeNOK: MutableLiveData<Response<SingleRateModel>> = MutableLiveData()
+    val singleRateResponeSEK: MutableLiveData<Response<SingleRateModel>> = MutableLiveData()
+    val singleRateResponeHRK: MutableLiveData<Response<SingleRateModel>> = MutableLiveData()
+    val singleRateResponeRON: MutableLiveData<Response<SingleRateModel>> = MutableLiveData()
+    val singleRateResponeBGN: MutableLiveData<Response<SingleRateModel>> = MutableLiveData()
+    val singleRateResponeTRY: MutableLiveData<Response<SingleRateModel>> = MutableLiveData()
+    val singleRateResponeILS: MutableLiveData<Response<SingleRateModel>> = MutableLiveData()
+    val singleRateResponeCLP: MutableLiveData<Response<SingleRateModel>> = MutableLiveData()
+    val singleRateResponePHP: MutableLiveData<Response<SingleRateModel>> = MutableLiveData()
+    val singleRateResponeMXN: MutableLiveData<Response<SingleRateModel>> = MutableLiveData()
+    val singleRateResponeZAR: MutableLiveData<Response<SingleRateModel>> = MutableLiveData()
+    val singleRateResponeBRL: MutableLiveData<Response<SingleRateModel>> = MutableLiveData()
+    val singleRateResponeMYR: MutableLiveData<Response<SingleRateModel>> = MutableLiveData()
+    val singleRateResponeRUB: MutableLiveData<Response<SingleRateModel>> = MutableLiveData()
+    val singleRateResponeIDR: MutableLiveData<Response<SingleRateModel>> = MutableLiveData()
+    val singleRateResponeINR: MutableLiveData<Response<SingleRateModel>> = MutableLiveData()
+    val singleRateResponeKRW: MutableLiveData<Response<SingleRateModel>> = MutableLiveData()
+    val singleRateResponeCNY: MutableLiveData<Response<SingleRateModel>> = MutableLiveData()
+
+
 
     fun getCHF() {
         viewModelScope.launch {
             val response = repository.getCHF()
-            singleRateRespone.value = response
+            singleRateResponeCHF.value = response
         }
     }
 
     fun getUSD() {
         viewModelScope.launch {
             val response = repository.getUSD()
-            singleRateRespone.value = response
+            singleRateResponeUSD.value = response
         }
     }
 
     fun getEUR() {
         viewModelScope.launch {
             val response = repository.getEUR()
-            singleRateRespone.value = response
+            singleRateResponeEUR.value = response
         }
     }
 
     fun getTHB() {
         viewModelScope.launch {
             val response = repository.getTHB()
-            singleRateRespone.value = response
+            singleRateResponeTHB.value = response
         }
     }
 
     fun getAUD() {
         viewModelScope.launch {
             val response = repository.getAUD()
-            singleRateRespone.value = response
+            singleRateResponeAUD.value = response
         }
     }
 
     fun getHKD() {
         viewModelScope.launch {
             val response = repository.getHKD()
-            singleRateRespone.value = response
+            singleRateResponeHKD.value = response
         }
     }
 
     fun getCAD() {
         viewModelScope.launch {
             val response = repository.getCAD()
-            singleRateRespone.value = response
+            singleRateResponeCAD.value = response
         }
     }
 
     fun getNZD() {
         viewModelScope.launch {
             val response = repository.getNZD()
-            singleRateRespone.value = response
+            singleRateResponeNZD.value = response
         }
     }
 
     fun getSGD() {
         viewModelScope.launch {
             val response = repository.getSGD()
-            singleRateRespone.value = response
+            singleRateResponeSGD.value = response
         }
     }
 
     fun getHUF() {
         viewModelScope.launch {
             val response = repository.getHUF()
-            singleRateRespone.value = response
+            singleRateResponeHUF.value = response
         }
     }
 
     fun getGBP() {
         viewModelScope.launch {
             val response = repository.getGBP()
-            singleRateRespone.value = response
+            singleRateResponeGBP.value = response
         }
     }
 
     fun getUAH() {
         viewModelScope.launch {
             val response = repository.getUAH()
-            singleRateRespone.value = response
+            singleRateResponeUAH.value = response
         }
     }
 
     fun getJPY() {
         viewModelScope.launch {
             val response = repository.getJPY()
-            singleRateRespone.value = response
+            singleRateResponeJPY.value = response
         }
     }
 
     fun getCZK() {
         viewModelScope.launch {
             val response = repository.getCZK()
-            singleRateRespone.value = response
+            singleRateResponeCZK.value = response
         }
     }
 
     fun getDKK() {
         viewModelScope.launch {
             val response = repository.getDKK()
-            singleRateRespone.value = response
+            singleRateResponeDKK.value = response
         }
     }
 
     fun getISK() {
         viewModelScope.launch {
             val response = repository.getISK()
-            singleRateRespone.value = response
+            singleRateResponeISK.value = response
         }
     }
 
     fun getNOK() {
         viewModelScope.launch {
             val response = repository.getNOK()
-            singleRateRespone.value = response
+            singleRateResponeNOK.value = response
         }
     }
 
     fun getSEK() {
         viewModelScope.launch {
             val response = repository.getSEK()
-            singleRateRespone.value = response
+            singleRateResponeSEK.value = response
         }
     }
 
     fun getHRK() {
         viewModelScope.launch {
             val response = repository.getHRK()
-            singleRateRespone.value = response
+            singleRateResponeHRK.value = response
         }
     }
 
     fun getRON() {
         viewModelScope.launch {
             val response = repository.getRON()
-            singleRateRespone.value = response
+            singleRateResponeRON.value = response
         }
     }
 
     fun getBGN() {
         viewModelScope.launch {
             val response = repository.getBGN()
-            singleRateRespone.value = response
+            singleRateResponeBGN.value = response
         }
     }
 
     fun getTRY() {
         viewModelScope.launch {
             val response = repository.getTRY()
-            singleRateRespone.value = response
+            singleRateResponeTRY.value = response
         }
     }
 
     fun getILS() {
         viewModelScope.launch {
             val response = repository.getILS()
-            singleRateRespone.value = response
+            singleRateResponeILS.value = response
         }
     }
 
     fun getCLP() {
         viewModelScope.launch {
             val response = repository.getCLP()
-            singleRateRespone.value = response
+            singleRateResponeCLP.value = response
         }
     }
 
     fun getPHP() {
         viewModelScope.launch {
             val response = repository.getPHP()
-            singleRateRespone.value = response
+            singleRateResponePHP.value = response
         }
     }
 
     fun getMXN() {
         viewModelScope.launch {
             val response = repository.getMXN()
-            singleRateRespone.value = response
+            singleRateResponeMXN.value = response
         }
     }
 
     fun getZAR() {
         viewModelScope.launch {
             val response = repository.getZAR()
-            singleRateRespone.value = response
+            singleRateResponeZAR.value = response
         }
     }
 
     fun getBRL() {
         viewModelScope.launch {
             val response = repository.getBRL()
-            singleRateRespone.value = response
+            singleRateResponeBRL.value = response
         }
     }
 
     fun getMYR() {
         viewModelScope.launch {
             val response = repository.getMYR()
-            singleRateRespone.value = response
+            singleRateResponeMYR.value = response
         }
     }
 
     fun getRUB() {
         viewModelScope.launch {
             val response = repository.getRUB()
-            singleRateRespone.value = response
+            singleRateResponeRUB.value = response
         }
     }
 
     fun getIDR() {
         viewModelScope.launch {
             val response = repository.getIDR()
-            singleRateRespone.value = response
+            singleRateResponeIDR.value = response
         }
     }
 
     fun getINR() {
         viewModelScope.launch {
             val response = repository.getINR()
-            singleRateRespone.value = response
+            singleRateResponeINR.value = response
         }
     }
 
     fun getKRW() {
         viewModelScope.launch {
             val response = repository.getKRW()
-            singleRateRespone.value = response
+            singleRateResponeKRW.value = response
         }
     }
 
     fun getCNY() {
         viewModelScope.launch {
             val response = repository.getCNY()
-            singleRateRespone.value = response
+            singleRateResponeCNY.value = response
         }
     }
 }

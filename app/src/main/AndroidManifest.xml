@@ -11,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light">
+        <activity android:name=".ChartActivity"></activity>
         <activity android:name=".CoursesCalculator.CoursesConverterActivity" />
         <activity android:name=".Gold.GoldActivity" />
         <activity android:name=".Courses.CoursesActivity" />

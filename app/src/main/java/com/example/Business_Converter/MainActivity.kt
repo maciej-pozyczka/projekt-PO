@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var goldButton : Button
     lateinit var coursesButton : Button
     lateinit var coursesCalculatorButton : Button
+    lateinit var chartButton : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,14 +25,13 @@ class MainActivity : AppCompatActivity() {
         goldButton = findViewById(R.id.gold)
         coursesButton = findViewById(R.id.courses)
         coursesCalculatorButton = findViewById(R.id.coursesCalculator)
+        chartButton = findViewById(R.id.Chart)
 
         goldButton.setOnClickListener(object : View.OnClickListener{
             override fun onClick(v: View?) {
                 val intent = Intent(this@MainActivity, GoldActivity::class.java)
                 startActivity(intent)
             }
-
-
         })
 
         coursesButton.setOnClickListener(object : View.OnClickListener{
@@ -39,8 +39,6 @@ class MainActivity : AppCompatActivity() {
                 val intent = Intent(this@MainActivity, CoursesActivity::class.java)
                 startActivity(intent)
             }
-
-
         })
 
         coursesCalculatorButton.setOnClickListener(object : View.OnClickListener{
@@ -48,9 +46,16 @@ class MainActivity : AppCompatActivity() {
                 val intent = Intent(this@MainActivity, CoursesConverterActivity::class.java)
                 startActivity(intent)
             }
+        })
 
+        chartButton.setOnClickListener(object : View.OnClickListener {
+            override fun onClick(v: View?) {
+                val intent = Intent(this@MainActivity, ChartActivity::class.java)
+                startActivity(intent)
+            }
 
         })
+
 
 
     }
