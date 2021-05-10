@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import com.example.Business_Converter.Chart.ChartActivity
 import com.example.Business_Converter.Courses.CoursesActivity
 import com.example.Business_Converter.CoursesCalculator.CoursesConverterActivity
 import com.example.Business_Converter.Gold.GoldActivity
@@ -17,6 +18,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var coursesButton : Button
     lateinit var coursesCalculatorButton : Button
     lateinit var chartButton : Button
+    lateinit var someRatesButton : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,6 +28,7 @@ class MainActivity : AppCompatActivity() {
         coursesButton = findViewById(R.id.courses)
         coursesCalculatorButton = findViewById(R.id.coursesCalculator)
         chartButton = findViewById(R.id.Chart)
+        someRatesButton = findViewById(R.id.someRates)
 
         goldButton.setOnClickListener(object : View.OnClickListener{
             override fun onClick(v: View?) {
@@ -51,6 +54,14 @@ class MainActivity : AppCompatActivity() {
         chartButton.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
                 val intent = Intent(this@MainActivity, ChartActivity::class.java)
+                startActivity(intent)
+            }
+
+        })
+
+        someRatesButton.setOnClickListener(object : View.OnClickListener {
+            override fun onClick(v: View?) {
+                val intent = Intent(this@MainActivity, LastRatesActivity::class.java)
                 startActivity(intent)
             }
 

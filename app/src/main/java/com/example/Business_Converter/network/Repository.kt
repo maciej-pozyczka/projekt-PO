@@ -7,6 +7,10 @@ import retrofit2.Response
 
 class Repository {
 
+    suspend fun getSomeRates(code: String, number: Int): Response<SingleRateModel> {
+        return RetrofitInstance.api.getSomeRates(code, number)
+    }
+
     suspend fun getGold(): Response<ArrayList<GoldModelItem>> {
         return RetrofitInstance.api.getGold()
     }

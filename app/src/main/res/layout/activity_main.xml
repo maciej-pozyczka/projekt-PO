@@ -40,4 +40,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/coursesCalculator" />
 
+    <Button
+        android:id="@+id/someRates"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Some Last Rates"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Chart" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

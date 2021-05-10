@@ -1,9 +1,10 @@
-package com.example.Business_Converter
+package com.example.Business_Converter.Chart
 
 import android.content.res.Resources
 import android.util.Log
 import androidx.lifecycle.Observer
 import com.example.Business_Converter.Gold.GoldViewModel
+import com.example.Business_Converter.R
 import com.github.mikephil.charting.charts.LineChart
 import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData

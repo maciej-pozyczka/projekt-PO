@@ -5,6 +5,7 @@ import com.example.Business_Converter.CoursesCalculator.models.SingleRateModel
 import com.example.Business_Converter.Gold.GoldModelItem
 import retrofit2.Response
 import retrofit2.http.GET
+import retrofit2.http.Path
 
 interface SimpleApi {
 
@@ -12,6 +13,12 @@ interface SimpleApi {
     suspend fun getCourses(): Response<ArrayList<CoursesItem>>
     @GET("/api/cenyzlota/last/30/?format=json")
     suspend fun getGold(): Response<ArrayList<GoldModelItem>>
+
+    @GET("/api/exchangerates/rates/a/{code}/last/{number}/?format=json")
+    suspend fun getSomeRates(
+            @Path("code") code: String,
+            @Path("number") number: Int
+    ): Response<SingleRateModel>
 
     @GET("/api/exchangerates/rates/a/chf?format=json")
     suspend fun getCHF(): Response<SingleRateModel>
