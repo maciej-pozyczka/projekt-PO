@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CoursesCalculator.CoursesConverterActivity">
+
+    <Button
+        android:id="@+id/buttonCNY"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="CNY"
+        app:layout_constraintEnd_toEndOf="@+id/buttonMYR"
+        app:layout_constraintStart_toStartOf="@+id/buttonMYR"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMYR" />
+
+    <Button
+        android:id="@+id/buttonKRW"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="KRW"
+        app:layout_constraintEnd_toEndOf="@+id/buttonRUB"
+        app:layout_constraintStart_toStartOf="@+id/buttonRUB"
+        app:layout_constraintTop_toBottomOf="@+id/buttonRUB" />
+
+    <Button
+        android:id="@+id/buttonINR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="INR"
+        app:layout_constraintEnd_toEndOf="@+id/buttonNOK"
+        app:layout_constraintStart_toStartOf="@+id/buttonNOK"
+        app:layout_constraintTop_toBottomOf="@+id/buttonNOK" />
+
+    <Button
+        android:id="@+id/buttonRUB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="RUB"
+        app:layout_constraintEnd_toEndOf="@+id/buttonISK"
+        app:layout_constraintStart_toStartOf="@+id/buttonISK"
+        app:layout_constraintTop_toBottomOf="@+id/buttonISK" />
+
+    <Button
+        android:id="@+id/buttonMYR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="MYR"
+        app:layout_constraintEnd_toEndOf="@+id/buttonZAR"
+        app:layout_constraintStart_toStartOf="@+id/buttonZAR"
+        app:layout_constraintTop_toBottomOf="@+id/buttonZAR" />
+
+    <Button
+        android:id="@+id/buttonBRL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="BRL"
+        app:layout_constraintEnd_toEndOf="@+id/buttonMXN"
+        app:layout_constraintStart_toStartOf="@+id/buttonMXN"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMXN" />
+
+    <Button
+        android:id="@+id/buttonZAR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="ZAR"
+        app:layout_constraintEnd_toEndOf="@+id/buttonPHP"
+        app:layout_constraintStart_toStartOf="@+id/buttonPHP"
+        app:layout_constraintTop_toBottomOf="@+id/buttonPHP" />
+
+    <Button
+        android:id="@+id/buttonMXN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="MXN"
+        app:layout_constraintEnd_toEndOf="@+id/buttonCLP"
+        app:layout_constraintStart_toStartOf="@+id/buttonCLP"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCLP" />
+
+    <Button
+        android:id="@+id/buttonPHP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="PHP"
+        app:layout_constraintEnd_toEndOf="@+id/buttonILS"
+        app:layout_constraintStart_toStartOf="@+id/buttonILS"
+        app:layout_constraintTop_toBottomOf="@+id/buttonILS" />
+
+    <Button
+        android:id="@+id/buttonCLP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="CLP"
+        app:layout_constraintEnd_toEndOf="@+id/buttonTRY"
+        app:layout_constraintStart_toStartOf="@+id/buttonTRY"
+        app:layout_constraintTop_toBottomOf="@+id/buttonTRY" />
+
+    <Button
+        android:id="@+id/buttonTRY"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="TRY"
+        app:layout_constraintEnd_toEndOf="@+id/buttonHRK"
+        app:layout_constraintStart_toStartOf="@+id/buttonHRK"
+        app:layout_constraintTop_toBottomOf="@+id/buttonHRK" />
+
+    <Button
+        android:id="@+id/buttonBGN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="BGN"
+        app:layout_constraintEnd_toEndOf="@+id/buttonRON"
+        app:layout_constraintStart_toStartOf="@+id/buttonRON"
+        app:layout_constraintTop_toBottomOf="@+id/buttonRON" />
+
+    <Button
+        android:id="@+id/buttonHRK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="HRK"
+        app:layout_constraintEnd_toEndOf="@+id/buttonSEK"
+        app:layout_constraintStart_toStartOf="@+id/buttonSEK"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSEK" />
+
+    <Button
+        android:id="@+id/buttonISK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="ISK"
+        app:layout_constraintEnd_toEndOf="@+id/buttonDKK"
+        app:layout_constraintStart_toStartOf="@+id/buttonDKK"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDKK" />
+
+    <EditText
+        android:id="@+id/CalculatorEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:ems="10"
+        android:hint="Wpisz kwotę"
+        android:inputType="numberDecimal"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/CalculatorTextViewPLN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:hint="to PLN"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="@+id/CalculatorEditText"
+        app:layout_constraintStart_toStartOf="@+id/CalculatorEditText"
+        app:layout_constraintTop_toBottomOf="@+id/CalculatorEditText" />
+
+    <Button
+        android:id="@+id/buttonCHF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="1dp"
+        android:text="CHF"
+        app:layout_constraintEnd_toStartOf="@+id/buttonEUR"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CalculatorTextViewOther" />
+
+    <Button
+        android:id="@+id/buttonEUR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="1dp"
+        android:text="EUR"
+        app:layout_constraintEnd_toStartOf="@+id/buttonUSD"
+        app:layout_constraintStart_toEndOf="@+id/buttonCHF"
+        app:layout_constraintTop_toBottomOf="@+id/CalculatorTextViewOther" />
+
+    <Button
+        android:id="@+id/buttonUSD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="1dp"
+        android:text="USD"
+        app:layout_constraintEnd_toStartOf="@+id/buttonGBP"
+        app:layout_constraintStart_toEndOf="@+id/buttonEUR"
+        app:layout_constraintTop_toBottomOf="@+id/CalculatorTextViewOther" />
+
+    <Button
+        android:id="@+id/buttonGBP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="3dp"
+        android:text="GBP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonUSD"
+        app:layout_constraintTop_toBottomOf="@+id/CalculatorTextViewOther" />
+
+    <Button
+        android:id="@+id/buttonTHB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="THB"
+        app:layout_constraintEnd_toEndOf="@+id/buttonCHF"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/buttonCHF"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCHF" />
+
+    <Button
+        android:id="@+id/buttonAUD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="AUD"
+        app:layout_constraintEnd_toEndOf="@+id/buttonEUR"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/buttonEUR"
+        app:layout_constraintTop_toBottomOf="@+id/buttonEUR" />
+
+    <Button
+        android:id="@+id/buttonHKD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="HKD"
+        app:layout_constraintEnd_toEndOf="@+id/buttonTHB"
+        app:layout_constraintStart_toStartOf="@+id/buttonTHB"
+        app:layout_constraintTop_toBottomOf="@+id/buttonTHB" />
+
+    <Button
+        android:id="@+id/buttonCAD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="CAD"
+        app:layout_constraintEnd_toEndOf="@+id/buttonAUD"
+        app:layout_constraintStart_toStartOf="@+id/buttonAUD"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAUD" />
+
+    <Button
+        android:id="@+id/buttonNZD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="NZD"
+        app:layout_constraintEnd_toEndOf="@+id/buttonHKD"
+        app:layout_constraintStart_toStartOf="@+id/buttonHKD"
+        app:layout_constraintTop_toBottomOf="@+id/buttonHKD" />
+
+    <Button
+        android:id="@+id/buttonSGD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="SGD"
+        app:layout_constraintEnd_toEndOf="@+id/buttonCAD"
+        app:layout_constraintStart_toStartOf="@+id/buttonCAD"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCAD" />
+
+    <Button
+        android:id="@+id/buttonHUF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="HUF"
+        app:layout_constraintEnd_toEndOf="@+id/buttonNZD"
+        app:layout_constraintStart_toStartOf="@+id/buttonNZD"
+        app:layout_constraintTop_toBottomOf="@+id/buttonNZD" />
+
+    <Button
+        android:id="@+id/buttonUAH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="UAH"
+        app:layout_constraintEnd_toEndOf="@+id/buttonSGD"
+        app:layout_constraintStart_toStartOf="@+id/buttonSGD"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSGD" />
+
+    <Button
+        android:id="@+id/buttonJPY"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="JPY"
+        app:layout_constraintEnd_toEndOf="@+id/buttonHUF"
+        app:layout_constraintStart_toStartOf="@+id/buttonHUF"
+        app:layout_constraintTop_toBottomOf="@+id/buttonHUF" />
+
+    <Button
+        android:id="@+id/buttonCZK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="CZK"
+        app:layout_constraintEnd_toEndOf="@+id/buttonJPY"
+        app:layout_constraintStart_toStartOf="@+id/buttonJPY"
+        app:layout_constraintTop_toBottomOf="@+id/buttonJPY" />
+
+    <Button
+        android:id="@+id/buttonDKK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="DKK"
+        app:layout_constraintEnd_toEndOf="@+id/buttonUAH"
+        app:layout_constraintStart_toStartOf="@+id/buttonUAH"
+        app:layout_constraintTop_toBottomOf="@+id/buttonUAH" />
+
+    <Button
+        android:id="@+id/buttonNOK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="NOK"
+        app:layout_constraintEnd_toEndOf="@+id/buttonCZK"
+        app:layout_constraintStart_toStartOf="@+id/buttonCZK"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCZK" />
+
+    <Button
+        android:id="@+id/buttonSEK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="SEK"
+        app:layout_constraintEnd_toEndOf="@+id/buttonUSD"
+        app:layout_constraintStart_toStartOf="@+id/buttonUSD"
+        app:layout_constraintTop_toBottomOf="@+id/buttonUSD" />
+
+    <Button
+        android:id="@+id/buttonRON"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="RON"
+        app:layout_constraintEnd_toEndOf="@+id/buttonGBP"
+        app:layout_constraintStart_toStartOf="@+id/buttonGBP"
+        app:layout_constraintTop_toBottomOf="@+id/buttonGBP" />
+
+    <Button
+        android:id="@+id/buttonILS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="ILS"
+        app:layout_constraintEnd_toEndOf="@+id/buttonBGN"
+        app:layout_constraintStart_toStartOf="@+id/buttonBGN"
+        app:layout_constraintTop_toBottomOf="@+id/buttonBGN" />
+
+    <Button
+        android:id="@+id/buttonIDR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="IDR"
+        app:layout_constraintEnd_toEndOf="@+id/buttonBRL"
+        app:layout_constraintStart_toStartOf="@+id/buttonBRL"
+        app:layout_constraintTop_toBottomOf="@+id/buttonBRL" />
+
+    <TextView
+        android:id="@+id/CalculatorTextViewOther"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="from PLN"
+        app:layout_constraintEnd_toEndOf="@+id/CalculatorTextViewPLN"
+        app:layout_constraintStart_toStartOf="@+id/CalculatorTextViewPLN"
+        app:layout_constraintTop_toBottomOf="@+id/CalculatorTextViewPLN" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
