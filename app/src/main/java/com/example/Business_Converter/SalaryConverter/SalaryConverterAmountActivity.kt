@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.AttributeSet
 import android.view.View
 import android.widget.Button
+import android.widget.CheckBox
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import com.example.Business_Converter.R
@@ -14,6 +15,8 @@ class SalaryConverterAmountActivity : AppCompatActivity() {
 
     lateinit var calculateButton : Button
     lateinit var salaryEditText : EditText
+    lateinit var isStudentUnder26 : CheckBox
+    lateinit var sickness : CheckBox
 
     override fun onCreate(savedInstanceState: Bundle?) { // metoda onCreate jest zwiazane z cyklem zycia aplikacji
         super.onCreate(savedInstanceState)
@@ -21,6 +24,8 @@ class SalaryConverterAmountActivity : AppCompatActivity() {
 
         calculateButton = findViewById(R.id.calculateButton)
         salaryEditText = findViewById(R.id.salaryEditText)
+        isStudentUnder26 = findViewById(R.id.isAgeHigherThan26)
+        sickness = findViewById(R.id.sickness)
 
         calculateButton.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
@@ -35,6 +40,8 @@ class SalaryConverterAmountActivity : AppCompatActivity() {
 
                 //wycagnieta wartosc wrzucamy do paczki pod kluczem CONTRACT_KEY ktory jest string i ma wartosc "some key"
                 bundle.putLong(SalaryConverterContractActivity.CONTRACT_KEY,bruttoSalaryValue)
+                bundle.putBoolean(SalaryConverterContractActivity.IS_UNDER_26_AND_STUDENT_KEY,isStudentUnder26.isChecked)
+                bundle.putBoolean(SalaryConverterContractActivity.IS_PAYING_SICKNESS,sickness.isChecked)
 
                 // wrzucamy nasza paczke do intentu jako "extra"
                 intent.putExtras(bundle)

@@ -8,16 +8,40 @@
     <EditText
         android:hint="Enter gross salary"
         android:id="@+id/salaryEditText"
-        android:layout_width="210dp"
+        android:layout_width="260dp"
         android:gravity="center"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="numberSigned" />
 
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content">
+        <CheckBox
+            android:id="@+id/isAgeHigherThan26"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="I am student under 26 old" />
+
+        <CheckBox
+            android:id="@+id/sickness"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="I am paying sickness" />
+
+    </LinearLayout>
+
     <Button
         android:layout_marginTop="8dp"
         android:id="@+id/calculateButton"
-        android:layout_width="210dp"
+        android:layout_width="260dp"
         android:layout_height="wrap_content"
         android:text="Calculate" />
 

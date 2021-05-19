@@ -6,6 +6,8 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3dfdd7b9ec9e9466563e4fc3ad66cced/jetified-timer-debug/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.data2viz.d2v/timer-android-debug/0.8.12/a9f3c46ec9ab8117c94c2b821c72bcae9fec16e5/timer-android-debug-0.8.12-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

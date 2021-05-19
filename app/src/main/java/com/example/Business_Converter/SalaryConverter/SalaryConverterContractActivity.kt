@@ -3,6 +3,7 @@ package com.example.Business_Converter.SalaryConverter
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.CheckBox
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -13,10 +14,13 @@ class SalaryConverterContractActivity:AppCompatActivity() {
     // companion object to statyczny obiekt przechowujacy statyczne obiekty, zmienne, badz metody
     companion object {
         const val CONTRACT_KEY : String = "contract_key" //
+        const val IS_UNDER_26_AND_STUDENT_KEY : String = "is_under_26_and_student_key"
+        const val IS_PAYING_SICKNESS : String = "is_paying_sickness"
     }
 
     lateinit var umowaOPraceTextView : TextView
     lateinit var umowaOZlecenieTextView : TextView
+    lateinit var umowaODzieloTextView : TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,16 +28,25 @@ class SalaryConverterContractActivity:AppCompatActivity() {
 
         umowaOPraceTextView = findViewById(R.id.umowaOPraceWartosc)
         umowaOZlecenieTextView = findViewById(R.id.umowaOZlecenieWartosc)
+        umowaODzieloTextView = findViewById(R.id.umowaOdzieloWartosc)
 
         //odwolujemy sie do "paczki" ktora mogla byc przekazana do intencji uruchamiajcej nasza aktywnosc
         val intentBundle : Bundle? = intent.extras
         val salaryBruttoValue : Long?= intentBundle?.getLong(CONTRACT_KEY)
+        val isUnder26AndStudent : Boolean? = intentBundle?.getBoolean(IS_UNDER_26_AND_STUDENT_KEY)
+        val isPayingSickness : Boolean? = intentBundle?.getBoolean(IS_PAYING_SICKNESS)
 
         if(salaryBruttoValue != null) {
             umowaOPraceTextView.text = obliczenieUmowaOprace(salaryBruttoValue).toString() + " PLN"
-            umowaOZlecenieTextView.text = obliczenieUmowaOprace(salaryBruttoValue).toString() + " PLN"
+            if(isUnder26AndStudent != null && isPayingSickness != null) {
+                umowaOZlecenieTextView.text = obliczenieUmowaOZlecenie(
+                    salaryBruttoValue,
+                    isUnder26AndStudent,
+                    isPayingSickness
+                ).toString() + " PLN"
+            }
+            umowaODzieloTextView.text = obliczenieUmowaODzielo(salaryBruttoValue).toString() + " PLN"
         }
-
     }
 
     //stworz funkcje ktora przyjmuje Int jako argument i zwraca Int
@@ -66,13 +79,48 @@ class SalaryConverterContractActivity:AppCompatActivity() {
         Log.d("TEST", podatekDoUrzedu.toString())
        // 2600 - skladki z 1 czyli - 356,46 - 201,92 - 121 = 1920,62 netto
         val kwotaNetto = kwotaBrutto - skladkiSpoleczne - skladkaZdrowotnaDOPotracenia - podatekDoUrzedu
-        return 20000
+
         return kwotaNetto.toLong()
     }
 
-    fun obliczenieUmowaOZlecenie(kwotaBrutto:Long) :  Long{
-        return 40000
+    fun obliczenieUmowaODzielo(kwotaBrutto: Long) : Long{
         return (kwotaBrutto * 0.7458).toLong()
+    }
+
+    fun obliczenieUmowaOZlecenie(kwotaBrutto:Long, isUnder26AndStudent : Boolean, isPayingSickness : Boolean) : Long{
+        if(!isUnder26AndStudent) {
+            // Wpisujemy kwotę brutto
+            // składki społeczne: dwie składki obowiązkowe : emerytalna 9,75% i rentowa 1,5%, skłądka chorobowa jest dobrowolna i wynosi 2.45%, czyli kwota brutto*13,71% lub kwota brutto*11,26
+            val skladkaEmerytlna = kwotaBrutto * 0.0975
+            val skladaRentowa = kwotaBrutto * 0.015
+
+            val skladkaChorobwa: Double = if (isPayingSickness) kwotaBrutto * 0.045 else 0.00
+
+            val skladkiSpoleczne = skladkaEmerytlna + skladaRentowa + skladkaChorobwa
+
+            //wymiar składek zdrowotnych : brutto - składki społeczene
+            val wymiarSkladekZdorowtnych = kwotaBrutto - skladkiSpoleczne
+            // składka zdrowotna do potrącenia : wymiar składek zdrowotnych * 9%
+            val skladkZdrowotnaDoPotracenia = wymiarSkladekZdorowtnych * 0.09
+            //składka zdrowotna do obliczenia : wymiar składek zdrowotnych * 7,75%
+            val skladaZdrowotnaDoObliczenia = wymiarSkladekZdorowtnych * 0.075
+            // koszt uzyskania przychodu wymiar składek zdrowotnych * 20%
+            val kosztUzyskaniaPrzychodu = wymiarSkladekZdorowtnych * 0.2
+            // podstawa opodatkowania : wymiar składek zdrowotnyych - koszt uzyskania przychodu = kwotę zaokrąglić
+            val podstawaOpodatkowania =
+                Math.round(wymiarSkladekZdorowtnych - kosztUzyskaniaPrzychodu)
+            // podatek należny = podstawa opodatkowania * 18%
+            val podatekNalezny = podstawaOpodatkowania * 0.18
+            // podatek do urzędu = podaten należny - składka zdrowotna do obliczenia zaokrąglić
+            val podatekDoUrzedu = Math.round(podatekNalezny - skladaZdrowotnaDoObliczenia)
+            // netto = brutto - składki społeczne - składka zdrowotna do potrącenia - podatek do urzędu skarbowego
+            val kwotaNetto =
+                kwotaBrutto - skladkiSpoleczne - skladkZdrowotnaDoPotracenia - podatekDoUrzedu
+
+            return kwotaNetto.toLong()
+        }else{
+            return kwotaBrutto
+        }
     }
 
 }

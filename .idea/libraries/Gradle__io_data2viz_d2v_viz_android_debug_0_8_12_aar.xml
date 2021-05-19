@@ -6,6 +6,8 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/affbedb4039e3e0e0ed150629787742d/jetified-viz-debug/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.data2viz.d2v/viz-android-debug/0.8.12/8cb6a4e61ffbd7ecdaa1bef9285dc882c30bad4b/viz-android-debug-0.8.12-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

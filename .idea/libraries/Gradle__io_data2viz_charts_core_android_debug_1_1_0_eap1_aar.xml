@@ -6,6 +6,8 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2ccc0dd8aca513053becff3de48621b0/jetified-core-debug/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.data2viz.charts/core-android-debug/1.1.0-eap1/a2d6d35de243fbe27682bef67cb8885492292391/core-android-debug-1.1.0-eap1-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>
