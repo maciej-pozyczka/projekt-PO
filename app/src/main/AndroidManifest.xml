@@ -3,6 +3,7 @@
     package="com.example.Business_Converter">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 
     <application
         android:allowBackup="true"
@@ -11,15 +12,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BusinessConverter">
-        <activity android:name=".LastRatesActivity"></activity>
-
-        <activity android:name=".CurrencyConverter.CurrencyConverterActivity" />
-        //system musi wiedziec, ze aktywnosc istieje, manifest to informacja dla systemu
-
+        <activity android:name=".OneRateHistory.LastRatesActivity"
+                  android:configChanges="keyboardHidden|screenSize|screenLayout|orientation"/>
         <activity android:name=".SalaryConverter.SalaryConverterAmountActivity" />
-
         <activity android:name=".SalaryConverter.SalaryConverterContractActivity" />
-        <activity android:name=".Chart.ChartActivity" />
+        <activity android:name=".Chart.ChartActivity"
+                  android:configChanges="keyboardHidden|screenSize|screenLayout|orientation"/>
         <activity android:name=".CoursesCalculator.CoursesConverterActivity" />
         <activity android:name=".Gold.GoldActivity" />
         <activity android:name=".Courses.CoursesActivity" />
