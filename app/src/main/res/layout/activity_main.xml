@@ -33,12 +33,6 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/currencyConverterButton"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:text="@string/currency_converter" />
-
-        <Button
             android:id="@+id/salaryConverterButton"
             android:layout_width="250dp"
             android:layout_height="wrap_content"

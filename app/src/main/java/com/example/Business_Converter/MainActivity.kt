@@ -8,7 +8,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.Business_Converter.Chart.ChartActivity
 import com.example.Business_Converter.Courses.CoursesActivity
 import com.example.Business_Converter.CoursesCalculator.CoursesConverterActivity
-import com.example.Business_Converter.CurrencyConverter.CurrencyConverterActivity
 import com.example.Business_Converter.Gold.GoldActivity
 import com.example.Business_Converter.SalaryConverter.SalaryConverterAmountActivity
 
@@ -21,7 +20,6 @@ class MainActivity : AppCompatActivity() {
     lateinit var coursesCalculatorButton: Button
     lateinit var chartButton: Button
     lateinit var someRatesButton: Button
-    lateinit var currencyConverterButton: Button
     lateinit var salaryConverterButton: Button
 
 
@@ -34,7 +32,6 @@ class MainActivity : AppCompatActivity() {
         coursesCalculatorButton = findViewById(R.id.coursesCalculator)
         chartButton = findViewById(R.id.Chart)
         someRatesButton = findViewById(R.id.someRates)
-        currencyConverterButton = findViewById(R.id.currencyConverterButton)
         salaryConverterButton = findViewById(R.id.salaryConverterButton)
 
 
@@ -73,17 +70,6 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent)
             }
 
-        })
-
-
-        currencyConverterButton.setOnClickListener(object :
-            View.OnClickListener { // po klinieciu wywolujemy cialo metody
-            override fun onClick(v: View?) {
-                // intent jest poleceniem dla systemu operacyjnego co ma wykonac, w tym przpyadku poleceniem jest stworzenie aktynowsci
-                val intent = Intent(this@MainActivity, CurrencyConverterActivity::class.java) //
-                // metoda start activity przyjmuje polecneiem ktore opisuje ktora aktywnosc ma system operacyjny uruchomic
-                startActivity(intent)
-            }
         })
 
         salaryConverterButton.setOnClickListener(object :
