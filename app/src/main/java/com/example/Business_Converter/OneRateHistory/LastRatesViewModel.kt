@@ -1,4 +1,4 @@
-package com.example.Business_Converter
+package com.example.Business_Converter.OneRateHistory
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -16,6 +16,8 @@ class LastRatesViewModel(private val repository: Repository): ViewModel() {
         viewModelScope.launch {
             val response = repository.getSomeRates(code, number)
             ratesResponse.value = response
+
         }
     }
+
 }

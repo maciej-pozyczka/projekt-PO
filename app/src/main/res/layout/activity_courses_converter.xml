@@ -168,6 +168,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="3dp"
         android:hint="to PLN"
+        android:freezesText="true"
         android:text=""
         app:layout_constraintEnd_toEndOf="@+id/CalculatorEditText"
         app:layout_constraintStart_toStartOf="@+id/CalculatorEditText"
@@ -387,6 +388,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="3dp"
         android:text="from PLN"
+        android:freezesText="true"
         app:layout_constraintEnd_toEndOf="@+id/CalculatorTextViewPLN"
         app:layout_constraintStart_toStartOf="@+id/CalculatorTextViewPLN"
         app:layout_constraintTop_toBottomOf="@+id/CalculatorTextViewPLN" />

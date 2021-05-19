@@ -9,6 +9,7 @@ import com.example.Business_Converter.Chart.ChartActivity
 import com.example.Business_Converter.Courses.CoursesActivity
 import com.example.Business_Converter.CoursesCalculator.CoursesConverterActivity
 import com.example.Business_Converter.Gold.GoldActivity
+import com.example.Business_Converter.OneRateHistory.LastRatesActivity
 
 
 class MainActivity : AppCompatActivity() {

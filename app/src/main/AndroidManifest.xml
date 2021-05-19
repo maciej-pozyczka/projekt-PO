@@ -3,6 +3,7 @@
     package="com.example.Business_Converter">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 
     <application
         android:allowBackup="true"
@@ -11,9 +12,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light">
-        <activity android:name=".LastRatesActivity"></activity>
-        <activity android:name=".Chart.ChartActivity" />
-        <activity android:name=".CoursesCalculator.CoursesConverterActivity" />
+        <activity android:name=".OneRateHistory.LastRatesActivity"
+                  android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"/>
+        <activity android:name=".Chart.ChartActivity"
+                  android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"/>
+        <activity android:name=".CoursesCalculator.CoursesConverterActivity"/>
         <activity android:name=".Gold.GoldActivity" />
         <activity android:name=".Courses.CoursesActivity" />
         <activity android:name=".MainActivity">

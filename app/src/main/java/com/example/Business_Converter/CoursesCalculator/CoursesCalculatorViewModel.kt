@@ -8,6 +8,7 @@ import com.example.Business_Converter.network.Repository
 import kotlinx.coroutines.launch
 import retrofit2.Response
 
+
 class CoursesCalculatorViewModel(private val repository: Repository): ViewModel() {
 
     val singleRateResponeCHF: MutableLiveData<Response<SingleRateModel>> = MutableLiveData()
