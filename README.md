@@ -1,3 +1,3 @@
 # projekt-PO
-![plot](./D/Pobrane/USECASE_PO.png)
-![plot](./D/Pobrane/UML_Projekt.png)
+![plot](./Pobrane/USECASE_PO.png)
+![plot](./Pobrane/UML_Projekt.png)
